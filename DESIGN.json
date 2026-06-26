@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-07T00:00:00Z",
+  "title": "Design System: Foodize",
+  "extensions": {
+    "colorMeta": {
+      "fire":     { "role": "primary",   "displayName": "Fire",       "canonical": "oklch(68% 0.19 35)",   "tonalRamp": ["oklch(20% 0.06 35)","oklch(30% 0.09 35)","oklch(40% 0.12 35)","oklch(50% 0.15 35)","oklch(60% 0.17 35)","oklch(68% 0.19 35)","oklch(78% 0.14 35)","oklch(90% 0.07 35)"] },
+      "fire-dim": { "role": "primary",   "displayName": "Fire Dim",   "canonical": "oklch(60% 0.17 35)",   "tonalRamp": ["oklch(18% 0.05 35)","oklch(28% 0.08 35)","oklch(38% 0.11 35)","oklch(48% 0.14 35)","oklch(58% 0.16 35)","oklch(65% 0.17 35)","oklch(74% 0.13 35)","oklch(88% 0.06 35)"] },
+      "amber":    { "role": "secondary", "displayName": "Amber",      "canonical": "oklch(76% 0.16 65)",   "tonalRamp": ["oklch(22% 0.05 65)","oklch(32% 0.08 65)","oklch(42% 0.10 65)","oklch(52% 0.12 65)","oklch(62% 0.14 65)","oklch(72% 0.16 65)","oklch(82% 0.12 65)","oklch(92% 0.06 65)"] },
+      "gold":     { "role": "secondary", "displayName": "Gold",       "canonical": "oklch(68% 0.14 60)",   "tonalRamp": ["oklch(20% 0.04 60)","oklch(30% 0.07 60)","oklch(40% 0.09 60)","oklch(50% 0.11 60)","oklch(60% 0.13 60)","oklch(68% 0.14 60)","oklch(78% 0.10 60)","oklch(90% 0.05 60)"] },
+      "success":  { "role": "semantic",  "displayName": "Success",    "canonical": "oklch(62% 0.19 145)",  "tonalRamp": ["oklch(18% 0.06 145)","oklch(28% 0.09 145)","oklch(38% 0.12 145)","oklch(48% 0.15 145)","oklch(56% 0.17 145)","oklch(62% 0.19 145)","oklch(72% 0.15 145)","oklch(88% 0.07 145)"] },
+      "warning":  { "role": "semantic",  "displayName": "Warning",    "canonical": "oklch(68% 0.17 60)",   "tonalRamp": ["oklch(20% 0.05 60)","oklch(30% 0.08 60)","oklch(40% 0.10 60)","oklch(50% 0.13 60)","oklch(58% 0.15 60)","oklch(68% 0.17 60)","oklch(78% 0.13 60)","oklch(92% 0.06 60)"] },
+      "error":    { "role": "semantic",  "displayName": "Error",      "canonical": "oklch(59% 0.22 27)",   "tonalRamp": ["oklch(18% 0.07 27)","oklch(28% 0.10 27)","oklch(38% 0.14 27)","oklch(48% 0.17 27)","oklch(55% 0.19 27)","oklch(62% 0.22 27)","oklch(72% 0.17 27)","oklch(88% 0.08 27)"] },
+      "ink":      { "role": "neutral",   "displayName": "Ink",        "canonical": "oklch(17% 0.008 240)", "tonalRamp": ["oklch(10% 0.004 240)","oklch(17% 0.008 240)","oklch(25% 0.008 240)","oklch(35% 0.007 240)","oklch(48% 0.006 240)","oklch(62% 0.005 240)","oklch(78% 0.004 240)","oklch(94% 0.003 240)"] },
+      "paper":    { "role": "neutral",   "displayName": "Paper",      "canonical": "oklch(97.5% 0.005 90)","tonalRamp": ["oklch(20% 0.005 90)","oklch(35% 0.005 90)","oklch(50% 0.005 90)","oklch(65% 0.005 90)","oklch(78% 0.005 90)","oklch(88% 0.005 90)","oklch(94% 0.005 90)","oklch(97.5% 0.005 90)"] },
+      "cream":    { "role": "neutral",   "displayName": "Cream",      "canonical": "oklch(95% 0.012 80)",  "tonalRamp": ["oklch(22% 0.008 80)","oklch(35% 0.009 80)","oklch(50% 0.010 80)","oklch(65% 0.010 80)","oklch(78% 0.011 80)","oklch(87% 0.011 80)","oklch(92% 0.012 80)","oklch(95% 0.012 80)"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Restaurant names at hero scale, primary page titles. Playfair Display only at this role." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles on restaurant pages, menu category headers." },
+      "title":    { "displayName": "Title",    "purpose": "Card headings, order summaries, sidebar section titles. Manrope at this scale." },
+      "body":     { "displayName": "Body",     "purpose": "Menu item descriptions, order history, all paragraph content. 65ch max line length." },
+      "label":    { "displayName": "Label",    "purpose": "Navigation links, form labels, status badges, tag pills. Uppercase, tracked." }
+    },
+    "shadows": [
+      { "name": "ambient",    "value": "0 1px 2px rgba(31,35,40,0.06)",  "purpose": "Barely-there lift on small interactive tokens (chips, qty buttons)." },
+      { "name": "structural", "value": "0 8px 24px rgba(31,35,40,0.08)", "purpose": "Card hover states, selected states, elevated containers." },
+      { "name": "floating",   "value": "0 16px 42px rgba(31,35,40,0.12)","purpose": "Drawers, sidesheets, bottom sheets." },
+      { "name": "modal",      "value": "0 24px 64px rgba(31,35,40,0.14)","purpose": "Modal dialogs and cart overlay." },
+      { "name": "fire-glow",  "value": "0 10px 26px rgba(255,107,53,0.22)", "purpose": "Primary button hover, add-to-cart button, FAB. The only colored shadow." }
+    ],
+    "motion": [
+      { "name": "ease-out",    "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Standard state transitions. Snappy exit." },
+      { "name": "ease-snap",   "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Micro-interactions: badge pop, add-button pulse." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.4, 0, 0.2, 1)",  "purpose": "Continuous or reversible transitions (theme toggle, drawer)." },
+      { "name": "dur-xs",  "value": "100ms",  "purpose": "Immediate feedback: button press." },
+      { "name": "dur-sm",  "value": "180ms",  "purpose": "Input focus, hover transitions." },
+      { "name": "dur-md",  "value": "300ms",  "purpose": "Page transitions, modal entry." },
+      { "name": "dur-lg",  "value": "500ms",  "purpose": "Auth entry, modal appear animations." },
+      { "name": "dur-xl",  "value": "800ms",  "purpose": "Order confirmation ripple, success state." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-only", "value": "max-width: 599px",  "purpose": "Reduced gutter (14px), bottom tab bar visible, mobile nav height 58px." },
+      { "name": "tablet",      "value": "min-width: 600px",  "purpose": "Desktop nav visible, bottom tab bar hidden." },
+      { "name": "auth-split",  "value": "min-width: 768px",  "purpose": "Auth page shows visual split panel." },
+      { "name": "desktop",     "value": "min-width: 960px",  "purpose": "3-column restaurant grid." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action button. Fire background, used for one primary action per screen.",
+      "html": "<button class=\"ds-btn-primary\">Order now</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #ff6b35; color: #ffffff; padding: 12px 20px; min-height: 44px; border: none; border-radius: 8px; font-family: 'Manrope', sans-serif; font-size: 0.875rem; font-weight: 600; cursor: pointer; box-shadow: 0 10px 26px rgba(255,107,53,0.22); transition: background 180ms cubic-bezier(0.16,1,0.3,1), box-shadow 180ms cubic-bezier(0.16,1,0.3,1), transform 180ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: #e85a28; box-shadow: 0 12px 32px rgba(255,107,53,0.32); transform: translateY(-1px); } .ds-btn-primary:active { transform: translateY(0); box-shadow: 0 6px 16px rgba(255,107,53,0.20); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(255,107,53,0.28); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting action. Card background with mid border.",
+      "html": "<button class=\"ds-btn-secondary\">View details</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; background: #fafaf7; color: #1f2328; padding: 12px 20px; min-height: 44px; border: 1px solid rgba(31,35,40,0.14); border-radius: 8px; font-family: 'Manrope', sans-serif; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background 180ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-secondary:hover { background: #f4f4f0; } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(31,35,40,0.12); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tertiary action. Transparent, text-only feel.",
+      "html": "<button class=\"ds-btn-ghost\">Cancel</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #1f2328; padding: 12px 20px; min-height: 44px; border: none; border-radius: 8px; font-family: 'Manrope', sans-serif; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background 180ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { background: rgba(31,35,40,0.05); } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(31,35,40,0.12); }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Standard form field. Fire focus ring.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\">Name</label><input class=\"ds-input\" type=\"text\" placeholder=\"Your name\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; } .ds-label { font-family: 'Manrope', sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4b535c; } .ds-input { padding: 14px 16px; border: 1px solid rgba(31,35,40,0.14); border-radius: 8px; background: #fafaf7; color: #1f2328; font-family: 'Manrope', sans-serif; font-size: 0.875rem; font-weight: 400; transition: border-color 180ms cubic-bezier(0.16,1,0.3,1), box-shadow 180ms cubic-bezier(0.16,1,0.3,1); } .ds-input::placeholder { color: #9ca3af; } .ds-input:focus { outline: none; border-color: #ff6b35; box-shadow: 0 0 0 3px rgba(255,107,53,0.10); }"
+    },
+    {
+      "name": "Tag Pill",
+      "kind": "chip",
+      "refersTo": "tag-pill",
+      "description": "Cuisine type or category label. Uppercase label scale.",
+      "html": "<span class=\"ds-tag\">Italian</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 100px; background: rgba(0,0,0,0.45); color: #ffffff; font-family: 'Manrope', sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; backdrop-filter: blur(8px); } .ds-tag--active { background: rgba(255,107,53,0.10); color: #ff6b35; backdrop-filter: none; }"
+    },
+    {
+      "name": "Order Status Badge",
+      "kind": "chip",
+      "refersTo": "order-status-badge",
+      "description": "Status indicator on order cards. Color by state, always with text.",
+      "html": "<span class=\"ds-status ds-status--ready\">Ready</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 6px; font-family: 'Manrope', sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; } .ds-status--pending { background: rgba(245,158,11,0.10); color: #d97706; border: 1px solid rgba(245,158,11,0.25); } .ds-status--preparing { background: rgba(255,107,53,0.10); color: #e85a28; border: 1px solid rgba(255,107,53,0.25); } .ds-status--ready { background: oklch(62% 0.19 145 / 0.08); color: oklch(50% 0.15 145); border: 1px solid oklch(62% 0.19 145 / 0.25); } .ds-status--cancelled { background: oklch(59% 0.22 27 / 0.08); color: oklch(46% 0.18 27); border: 1px solid oklch(59% 0.22 27 / 0.20); }"
+    },
+    {
+      "name": "Restaurant Card",
+      "kind": "card",
+      "refersTo": "restaurant-card",
+      "description": "Primary discovery unit. Photo-forward with dark scrim, metadata overlay.",
+      "html": "<div class=\"ds-restaurant-card\"><div class=\"ds-restaurant-card__photo\" style=\"background: linear-gradient(135deg, #3e444b 0%, #2f343a 100%);\"></div><div class=\"ds-restaurant-card__scrim\"><span class=\"ds-tag\">Italian</span><div class=\"ds-restaurant-card__meta\"><span class=\"ds-restaurant-card__title\">Bello Posto</span><span class=\"ds-restaurant-card__sub\">20 min · from 250₽</span></div></div></div>",
+      "css": ".ds-restaurant-card { position: relative; border-radius: 12px; border: 1px solid rgba(31,35,40,0.08); overflow: hidden; aspect-ratio: 3/2; box-shadow: 0 1px 2px rgba(31,35,40,0.06); transition: box-shadow 300ms cubic-bezier(0.16,1,0.3,1), transform 300ms cubic-bezier(0.16,1,0.3,1); cursor: pointer; } .ds-restaurant-card:hover { box-shadow: 0 8px 24px rgba(31,35,40,0.08); transform: translateY(-2px); } .ds-restaurant-card__photo { position: absolute; inset: 0; background-size: cover; background-position: center; filter: saturate(1.02) contrast(1.02); } .ds-restaurant-card__scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.32) 45%, rgba(0,0,0,0.05) 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 10px 12px; } .ds-restaurant-card__meta { display: flex; flex-direction: column; gap: 2px; } .ds-restaurant-card__title { font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; font-weight: 800; color: #ffffff; line-height: 1.2; } .ds-restaurant-card__sub { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.75); }"
+    },
+    {
+      "name": "Menu Item Row",
+      "kind": "card",
+      "refersTo": "menu-item",
+      "description": "Horizontal food item with photo, description, price and add button.",
+      "html": "<div class=\"ds-menu-item\"><div class=\"ds-menu-item__img\" style=\"background: #e5e7eb;\"></div><div class=\"ds-menu-item__body\"><span class=\"ds-menu-item__name\">Margherita</span><span class=\"ds-menu-item__desc\">Classic tomato, mozzarella, fresh basil</span><div class=\"ds-menu-item__footer\"><span class=\"ds-menu-item__price\">350₽</span><button class=\"ds-add-btn\" aria-label=\"Add to cart\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M8 3v10M3 8h10\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg></button></div></div></div>",
+      "css": ".ds-menu-item { display: flex; border: 1px solid rgba(31,35,40,0.08); border-radius: 12px; overflow: hidden; background: #ffffff; transition: border-color 180ms cubic-bezier(0.16,1,0.3,1); } .ds-menu-item:hover { border-color: rgba(31,35,40,0.14); } .ds-menu-item__img { width: 100px; min-height: 90px; flex-shrink: 0; background-size: cover; background-position: center; } .ds-menu-item__body { flex: 1; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; } .ds-menu-item__name { font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 800; color: #1f2328; line-height: 1.35; } .ds-menu-item__desc { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 400; color: #6b7280; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .ds-menu-item__footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; } .ds-menu-item__price { font-family: 'Manrope', sans-serif; font-size: 1.25rem; font-weight: 800; color: #1f2328; font-variant-numeric: tabular-nums; } .ds-add-btn { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #ff6b35; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 10px rgba(255,107,53,0.22); transition: background 180ms, box-shadow 180ms, transform 180ms cubic-bezier(0.16,1,0.3,1); } .ds-add-btn:hover { background: #e85a28; box-shadow: 0 4px 16px rgba(255,107,53,0.32); transform: scale(1.05); } .ds-add-btn:active { transform: scale(0.96); }"
+    },
+    {
+      "name": "Desktop Header",
+      "kind": "nav",
+      "description": "Fixed top navigation with frosted glass background. Active state in fire.",
+      "html": "<header class=\"ds-header\"><div class=\"ds-header__inner\"><span class=\"ds-header__brand\">Foodize</span><nav class=\"ds-header__nav\"><a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">Menu</a><a class=\"ds-nav-link\" href=\"#\">Orders</a><a class=\"ds-nav-link\" href=\"#\">Profile</a></nav></div></header>",
+      "css": ".ds-header { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: rgba(250,250,247,0.88); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(31,35,40,0.08); z-index: 100; } .ds-header__inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 100%; display: flex; align-items: center; justify-content: space-between; } .ds-header__brand { font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; font-weight: 700; color: #1f2328; } .ds-header__nav { display: flex; gap: 4px; } .ds-nav-link { display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 100px; font-family: 'Manrope', sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: #6b7280; transition: color 180ms, background 180ms; } .ds-nav-link:hover { color: #1f2328; background: rgba(31,35,40,0.05); } .ds-nav-link--active { color: #ff6b35; background: rgba(255,107,53,0.10); }"
+    },
+    {
+      "name": "Cart FAB",
+      "kind": "custom",
+      "description": "Floating action button for cart. Fire background, pill shape, Fire Glow shadow.",
+      "html": "<button class=\"ds-cart-fab\" aria-label=\"Open cart\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\"><path d=\"M2 2h1.5l2.5 9h8l2-6H6\" stroke=\"#fff\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"9\" cy=\"16\" r=\"1.25\" fill=\"#fff\"/><circle cx=\"14\" cy=\"16\" r=\"1.25\" fill=\"#fff\"/></svg><span class=\"ds-cart-fab__badge\">3</span></button>",
+      "css": ".ds-cart-fab { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: #ff6b35; border: none; border-radius: 100px; cursor: pointer; box-shadow: 0 10px 28px rgba(255,107,53,0.32); transition: background 180ms, box-shadow 180ms, transform 180ms cubic-bezier(0.16,1,0.3,1); } .ds-cart-fab:hover { background: #e85a28; box-shadow: 0 14px 36px rgba(255,107,53,0.40); transform: translateY(-2px); } .ds-cart-fab:active { transform: translateY(0) scale(0.96); } .ds-cart-fab__badge { position: absolute; top: -4px; right: -4px; width: 20px; height: 20px; background: #ffffff; color: #e85a28; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Manrope', sans-serif; font-size: 0.64rem; font-weight: 800; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Hungry Almanac",
+    "overview": "Foodize is a warm, deliberate product. Not the urgency of a delivery app with discount banners and countdown timers, but the quiet confidence of a well-edited restaurant guide: every screen makes food look desirable before it handles logistics. The system earns its personality through restraint. The fire-and-amber palette is present only where it earns its place. Serif type appears as a mark of quality, not decoration. The overall feeling is that of a carefully produced object, not a generated storefront.\n\nThis system rejects the first-reflex responses for food apps: Яндекс Еда's aggressive red and discount-first hierarchy, Wolt's cold Scandinavian minimalism, Uber Eats' neon-on-dark brutalism. It also rejects the generic SaaS answer: Tailwind clones with Inter on white, card grids without personality, no editorial voice.",
+    "keyCharacteristics": [
+      "Fire-amber accent used sparingly; its rarity makes it mean something",
+      "Playfair Display appears only at display and headline scale; body work is Manrope's territory",
+      "Tonal layer system (bg, bg-card, bg-surface, bg-raised) structures depth without shadows at rest",
+      "Shadows reserved for floating elements: modals, drawers, FABs, cart overlays",
+      "Motion is responsive, not choreographed: state feedback, not performance"
+    ],
+    "rules": [
+      { "name": "The One Flame Rule", "body": "Fire and its states are used on at most one primary action per screen. When fire appears, it is the only saturated color visible at that moment.", "section": "colors" },
+      { "name": "The No-White Background Rule", "body": "Page backgrounds are never pure #ffffff. Paper (#fafaf7) is the floor in light mode. All surfaces stack upward via the tonal layer system.", "section": "colors" },
+      { "name": "The Serif Scarcity Rule", "body": "Playfair Display is used for Display and Headline roles only. It never appears in body text, labels, buttons, or navigation.", "section": "typography" },
+      { "name": "The Scale Contract", "body": "Font sizes follow a 1.25x ratio. No intermediate values. No font-size: 15px.", "section": "typography" },
+      { "name": "The Float Rule", "body": "Shadows are a property of motion and state, not of visual hierarchy at rest. If an element is not floating, dragging, or being interacted with, it has no shadow.", "section": "elevation" },
+      { "name": "The Fire Glow Exception", "body": "The Fire Glow shadow appears only on fire-colored interactive elements. It does not appear on any other color.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use tonal background layers (bg → bg-card → bg-surface → bg-raised) to communicate depth at rest before reaching for shadows.",
+      "Do reserve Playfair Display for Display and Headline typographic roles only.",
+      "Do use fire as a single concentrated signal per screen.",
+      "Do pair every status color signal with a text or icon label.",
+      "Do treat food photography as the primary visual asset.",
+      "Do keep body text to 65ch maximum line length.",
+      "Do use prefers-reduced-motion to disable all keyframe animations."
+    ],
+    "donts": [
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe on cards, list items, or alerts.",
+      "Don't use background-clip: text with a gradient.",
+      "Don't use glassmorphism on static cards or information panels.",
+      "Don't make the design look like Яндекс Еда: no aggressive red, no discount banner hierarchy.",
+      "Don't make the design look like Wolt: no cold blue palette, no clinical minimalism.",
+      "Don't make the design look like Uber Eats: no dark-on-neon color schemes.",
+      "Don't produce generic SaaS output: no Tailwind-default card grids, no Inter on white.",
+      "Don't use shadows on static, at-rest cards.",
+      "Don't reuse fire for decorative fills or background tinting.",
+      "Don't nest cards.",
+      "Don't default to a modal."
+    ]
+  }
+}

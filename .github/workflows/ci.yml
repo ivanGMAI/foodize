@@ -1,0 +1,132 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install --preview
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Run Ruff check
+        run: uv run ruff check .
+
+      - name: Run Mypy
+        run: uv run mypy .
+
+      - name: Run Tests
+        run: uv run pytest --cov=. --cov-report=xml
+
+      - name: Run Alembic check
+        run: |
+          uv run alembic upgrade head
+          uv run alembic check
+
+  frontend-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: src/frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm run test -- --run
+
+      - name: Run Tests with Coverage
+        run: npm run test:coverage -- --run
+
+  telegram-miniapp-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/telegram-miniapp
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: src/telegram-miniapp/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+  openapi-contract-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          version: "latest"
+
+      - name: Set up Python
+        working-directory: src/backend
+        run: uv python install --preview
+
+      - name: Install backend dependencies
+        working-directory: src/backend
+        run: uv sync --frozen
+
+      - name: Set up Node.js for frontend
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: |
+            src/frontend/package-lock.json
+            src/telegram-miniapp/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: src/frontend
+        run: npm ci
+
+      - name: Install miniapp dependencies
+        working-directory: src/telegram-miniapp
+        run: npm ci
+
+      - name: Regenerate OpenAPI contract
+        run: make openapi
+
+      - name: Ensure generated contract is committed
+        run: git diff --exit-code -- openapi/foodize.openapi.json src/frontend/src/services/generated src/telegram-miniapp/src/services/generated
